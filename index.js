@@ -1,5 +1,5 @@
-const path = require('path')
-const tsConfigPath = path.resolve(__dirname, '../../../tsconfig.json')
+const { resolve } = require('path')
+const tsConfigPath = resolve(__dirname, '../../../tsconfig.json')
 
 module.exports = {
   // Sets supported environments.
@@ -28,7 +28,7 @@ module.exports = {
   rules: {
     // Warns when using console.log calls.
     'no-console': [1, { allow: ['warn', 'info', 'error'] }],
-    
+
     // Disable fixed max-len (this rule cant be autofixed).
     'max-len': 0,
 
@@ -49,14 +49,13 @@ module.exports = {
     'arrow-body-style': 0,
 
     // Require curlys whenever possible
-    'curly': 2,
+    curly: 2,
 
     // Forces camelCase'd variables.
     camelcase: 0,
     '@typescript-eslint/camelcase': [2, { ignoreDestructuring: true }],
 
-    // Dont force new line for arrays + objects, but add spacing before
-    // brackets and parentheses.
+    // Dont force new line for arrays & objects, but add spacing before brackets and parentheses.
     'object-curly-newline': 0,
     'space-in-parens': 0,
     'space-before-function-paren': [2, 'always'],
@@ -110,7 +109,7 @@ module.exports = {
 
     // Allow multiple expressions per line.
     'react/jsx-one-expression-per-line': 0,
-    
+
     // Disable strict a11y rules.
     'jsx-a11y/anchor-is-valid': 0,
     'jsx-a11y/media-has-caption': 0,
