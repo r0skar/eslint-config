@@ -1,6 +1,3 @@
-const { resolve } = require('path')
-const tsConfigPath = resolve(__dirname, '../../../tsconfig.json')
-
 module.exports = {
   // Sets supported environments.
   env: {
@@ -10,7 +7,8 @@ module.exports = {
 
   // Setup default parsers.
   parserOptions: {
-    project: tsConfigPath,
+    // Project must be defined by the user!
+    // project: 'path to TS config',
     sourceType: 'module',
     ecmaVersion: 2019,
     ecmaFeatures: {
