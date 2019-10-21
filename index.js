@@ -2,7 +2,8 @@ module.exports = {
   // Sets supported environments.
   env: {
     browser: true,
-    node: true
+    node: true,
+    es6: true
   },
 
   // Setup default parsers.
@@ -29,6 +30,9 @@ module.exports = {
 
     // Disable fixed max-len (this rule cant be autofixed).
     'max-len': 0,
+
+    // Disable returning consistent types.
+    'consistent-return': 0,
 
     // Disables semi colons and comma dangles but allow underscores.
     semi: 0,
@@ -62,6 +66,7 @@ module.exports = {
     'object-curly-spacing': [2, 'always'],
 
     // Setup best practices when working with TS.
+    '@typescript-eslint/no-namespace': 0,
     '@typescript-eslint/explicit-member-accessibility': 0,
     '@typescript-eslint/no-object-literal-type-assertion': 0,
     '@typescript-eslint/no-empty-interface': 0,
@@ -98,6 +103,7 @@ module.exports = {
     'react/prop-types': 0,
     'react/jsx-no-undef': 0,
     'react/react-in-jsx-scope': 0,
+    'react/jsx-curly-brace-presence': 0,
     'react/destructuring-assignment': 0,
     'react/jsx-boolean-value': 0,
     'react/no-unknown-property': 0,
